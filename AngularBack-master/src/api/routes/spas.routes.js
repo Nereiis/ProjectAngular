@@ -13,8 +13,8 @@ const spaRouter = express.Router();
 spaRouter.get("/", getSpas);
 spaRouter.get("/:id", getSpasById);
 
-spaRouter.post("/", isAuth, upload.single("Imagen"), postSpas);
-spaRouter.delete("/:id", isAuth, deleteSpas);
-spaRouter.put("/:id", isAuth, upload.single("Imagen"), putSpas);
+spaRouter.post("/",  upload.single("Imagen"), postSpas);
+spaRouter.delete("/:id",  deleteSpas);
+spaRouter.put("/:id",  upload.single("Imagen"), putSpas);
 
 module.exports = spaRouter;

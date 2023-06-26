@@ -35,4 +35,8 @@ export class DetalleSComponent {
       this.router.navigate(['/spas'])
     })
   }
+  putSpa(){
+    this.service.setSpa(this.spa, this.id)
+    this.router.navigate(['editSpa'])
+  }
 }

@@ -12,8 +12,8 @@ const islaRouter = express.Router();
 
 islaRouter.get("/", getIslas);
 islaRouter.get("/:id", getIslaById);
-islaRouter.post("/", isAuth, upload.single("imagen"), postIslas);
-islaRouter.delete("/:id", isAuth, deleteIslas);
-islaRouter.put("/:id", isAuth, upload.single("imagen"), putIslas);
+islaRouter.post("/",  upload.single("imagen"), postIslas);
+islaRouter.delete("/:id",  deleteIslas);
+islaRouter.put("/:id",  upload.single("imagen"), putIslas);
 
 module.exports = islaRouter;
