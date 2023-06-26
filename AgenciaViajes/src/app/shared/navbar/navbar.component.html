@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-body-tertiary" [ngStyle] = "navbg">
     <div class="container-fluid">
       <a class="navbar-brand" routerLink="/"> Viaja, Sueña </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,25 +10,18 @@
             <a class="nav-link active" aria-current="page" routerLink="/"> Home </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/escapadas"> Escapadas </a>
+            <a class="nav-link active" routerLink="/escapadas"> Escapadas </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" routerLink="/cruceros"> Cruceros </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/spas"> Spas </a>
+            <a class="nav-link active" routerLink="/spas"> Spas </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/islas"> Islas </a>
+            <a class="nav-link active" routerLink="/islas"> Islas </a>
           </li>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" routerLink="/"> Home </a></li>
-              <li><a class="dropdown-item" routerLink="/escapadas"> Escapadas </a></li>
-              <li><a class="dropdown-item" routerLink="/cruceros"> Cruceros </a></li>
-              <li><a class="dropdown-item" routerLink="/spas"> Spas </a></li>
-              <li><a class="dropdown-item" routerLink="/islas"> Islas </a></li>
-              <li><hr class="dropdown-divider"></li>
-            </ul>
+            
         </ul>
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Introduce un destino, experiencia.." aria-label="Search">
