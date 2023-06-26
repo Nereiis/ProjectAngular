@@ -1,0 +1,69 @@
+.crucero-container{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    img{
+        width: 97.7vw;
+        object-fit: contain;
+    }
+
+    h3 {
+        font-size: 34px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #337ab7; /* Color del texto */
+        font-family: 'Roboto', sans-serif; /* Fuente personalizada */
+        text-transform: uppercase; /* Convertir texto a mayúsculas */
+        letter-spacing: 2px; /* Espaciado entre letras */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombreado */
+      }
+
+      h5{
+        margin-bottom: 15px;
+        color: #337ab7; /* Color del texto */
+        font-family: 'Roboto', sans-serif; /* Fuente personalizada */
+        letter-spacing: 1px; /* Espaciado entre letras */
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombreado */
+      }
+
+      .btn{
+        align-items: center;
+        margin: 8px;
+      }
+
+      h6{
+        font-size: 18px;
+        margin-bottom: 15px;
+        color: green; /* Color del texto */
+        font-family: 'Roboto', sans-serif; /* Fuente personalizada */
+        letter-spacing: 1px; /* Espaciado entre letras */
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombreado */
+        font-weight: bolder; /* Negrita */
+        display: inline-block;
+        padding: 10px 20px;
+        border: 2px solid green;
+        border-radius: 5px;
+        background-color: transparent;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      h6:hover{
+        background-color: green;
+        color: #fff;
+      }
+      
+      p{
+        margin-top: 20px;
+        margin-bottom: 5px;
+        color: black; /* Color del texto */
+        font-family: 'Roboto', sans-serif; /* Fuente personalizada */
+        letter-spacing: 1px; /* Espaciado entre letras */
+        font-style: italic; /* Cursiva */
+      }
+}

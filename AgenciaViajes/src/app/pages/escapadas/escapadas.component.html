@@ -3,7 +3,7 @@
     <li class="itemlist" *ngFor="let escapada of escapadasList" routerLink="/escapadas/{{escapada._id}}">
         <h3>{{escapada.Nombre}}</h3>
         <p>{{escapada.Ubicacion}}</p>
-        <p>{{escapada.Precio}}</p>
+        <p>{{escapada.Precio}}€</p>
         <img src="{{escapada.Caratula}}" alt="{{escapada.Nombre}}" />
     </li>
 </ul>

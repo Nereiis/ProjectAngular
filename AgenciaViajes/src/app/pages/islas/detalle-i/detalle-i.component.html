@@ -1,9 +1,10 @@
-<div *ngIf="isla">
+<div class="crucero-container" *ngIf="isla">
     <h3>{{isla.Nombre}}</h3>
-    <p>{{isla.Ubicacion}}</p>
-    <p>{{isla.Precio}}</p>
+    <h5>{{isla.Ubicacion}}</h5>
+    <h6>{{isla.Precio}}€</h6>
     <img src="{{isla.Imagen}}" alt="{{isla.Nombre}}" />
     <p>{{isla.Descripcion}}</p>
+    <h4> Actividades </h4>
     <p>{{isla.Actividades.Itinerario.Dia1}}</p>
     <p>{{isla.Actividades.Itinerario.Dia2}}</p>
     <div class="edit-container">

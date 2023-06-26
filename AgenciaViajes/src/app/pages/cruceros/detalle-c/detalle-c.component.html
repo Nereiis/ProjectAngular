@@ -1,11 +1,14 @@
-<div *ngIf="crucero">
+<div class="crucero-container" *ngIf="crucero">
     <h3>{{crucero.Nombre}}</h3>
-    <p>{{crucero.Ubicacion}}</p>
-    <p>{{crucero.Precio}}</p>
+    <h5>{{crucero.Ubicacion}}</h5>
+    <h6>{{crucero.Precio}}€</h6>
     <img src="{{crucero.Imagen}}" alt="{{crucero.Nombre}}" />
     <p>{{crucero.Descripcion}}</p>
-    <p>{{crucero.Actividades.Itinerario.Dia1}}</p>
-    <p>{{crucero.Actividades.Itinerario.Dia2}}</p>
+    <h4> Actividades </h4>
+    <p>Dia 1 -> 
+        {{crucero.Actividades.Itinerario.Dia1}}</p>
+    <p>Dia 2 ->
+        {{crucero.Actividades.Itinerario.Dia2}}</p>
     <div class="edit-container">
         <button type="button" class="btn btn-outline-success" (click)="putCrucero()"> Editar </button>
         <button type="button" class="btn btn-outline-danger" (click)="deleteCrucero()"> Eliminar </button>

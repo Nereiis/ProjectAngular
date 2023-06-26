@@ -1,9 +1,10 @@
-<div *ngIf="escapada">
+<div class="crucero-container" *ngIf="escapada">
     <h3>{{escapada.Nombre}}</h3>
-    <p>{{escapada.Ubicacion}}</p>
-    <p>{{escapada.Precio}}</p>
+    <h5>{{escapada.Ubicacion}}</h5>
+    <h6>{{escapada.Precio}}€</h6>
     <img src="{{escapada.Imagen}}" alt="{{escapada.Nombre}}" />
     <p>{{escapada.Descripcion}}</p>
+    <h4> Actividades </h4>
     <p>{{escapada.Actividades.Itinerario.Dia1}}</p>
     <p>{{escapada.Actividades.Itinerario.Dia2}}</p>
     <div class="edit-container">

@@ -1,9 +1,10 @@
-<div *ngIf="spa">
+<div class="crucero-container" *ngIf="spa">
     <h3>{{spa.Nombre}}</h3>
-    <p>{{spa.Ubicacion}}</p>
-    <p>{{spa.Precio}}</p>
+    <h5>{{spa.Ubicacion}}</h5>
+    <h6>{{spa.Precio}}€</h6>
     <img src="{{spa.Imagen}}" alt="{{spa.Nombre}}" />
     <p>{{spa.Descripcion}}</p>
+    <h4> Actividades </h4>
     <p>{{spa.Actividades.Itinerario.Dia1}}</p>
     <p>{{spa.Actividades.Itinerario.Dia2}}</p>
     <div class="edit-container">
