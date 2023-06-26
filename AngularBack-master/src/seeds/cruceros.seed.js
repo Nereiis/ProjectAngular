@@ -1,8 +1,7 @@
-const Escapada = require('../api/models/escapada.model');
-
+const Crucero = require ('../api/models/crucero.model');
 const mongoose = require('mongoose');
 
-const arrayEscapadas = [
+const arrayCruceros = [
     
     {
         "Nombre": "",
@@ -22,17 +21,17 @@ const arrayEscapadas = [
 
 mongoose.connect('mongodb+srv://root:root@cluster0.imov6up.mongodb.net/libreria?retryWrites=true&w=majority')
 .then(async () => {
-    const allEscapadas = await Escapada.find()
-    if(allEscapadas.length > 0){
-        await Escapada.collection.drop()
-        console.log('Escapadas borradas')
+    const allCruceros = await Crucero.find()
+    if(allCruceros.length > 0){
+        await Crucero.collection.drop()
+        console.log('Cruceros borrados')
     }
 })
 .catch(err => console.error('Error borrando',err))
 .then(async() => {
-    const escapadasMap = arrayLibros.map((libro) => new Libro(libro))
-    await Libro.insertMany(librosMap)
-    console.log('libros añadidos');
+    const crucerosMap = arrayCruceros.map((Crucero) => new Crucero(Crucero))
+    await Crucero.insertMany(crucerosMap)
+    console.log('Cruceros añadidos');
 })
 .catch(err => console.error('Error insertando',err))
 .finally(() => mongoose.disconnect());
