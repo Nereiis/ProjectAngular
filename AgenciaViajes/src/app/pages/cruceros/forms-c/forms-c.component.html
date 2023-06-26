@@ -29,16 +29,18 @@
         <label for="exampleFormControlInput1" class="form-label"> Link Imagen </label>
         <input formControlName="Imagen" type="text" class="form-control" id="exampleFormControlInput1">
     </div>
-    <div class="row g-3">
+    <div class="row g-3" formGroupName = "Actividades">
+      <div formGroupName = "Itinerario">
         <h6> Actividades </h6>
         <div class="col">
           <label>Dia 1</label>
-          <input type="text" class="form-control" formControlName="Dia1"  placeholder="First name" aria-label="First name">
+          <input type="text" class="form-control" formControlName="Dia1"  placeholder="Actividad" aria-label="First name">
         </div>
         <div class="col">
           <label>Dia 2</label>
-          <input type="text" class="form-control" formControlName="Dia2" placeholder="Last name" aria-label="Last name">
+          <input type="text" class="form-control" formControlName="Dia2" placeholder="Actividad" aria-label="Last name">
         </div>
+      </div>
       </div>
     <div class="col-12">
         <button class="btn btn-primary" type="submit"> Editar Crucero </button>

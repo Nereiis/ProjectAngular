@@ -29,8 +29,12 @@ console.log(this._id, this.crucero)
       Descripcion:[this.crucero?.Descripcion, [Validators.required]],
       Caratula:[this.crucero?.Caratula],
       Imagen:[this.crucero?.Imagen, [Validators.required]],
-      Dia1:[this.crucero?.Actividades.Itinerario.Dia1],
-      Dia2:[this.crucero?.Actividades.Itinerario.Dia2]
+      Actividades: this.form.group({
+        Itinerario: this.form.group({
+          Dia1:[this.crucero?.Actividades.Itinerario.Dia1],
+          Dia2:[this.crucero?.Actividades.Itinerario.Dia2]
+        })
+      })
     })
 
     this.cruceroForm.valueChanges.subscribe((data) => {
