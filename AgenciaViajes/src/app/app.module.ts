@@ -17,6 +17,9 @@ import { DetalleIComponent } from './pages/islas/detalle-i/detalle-i.component';
 import { DetalleSComponent } from './pages/spas/detalle-s/detalle-s.component';
 import { FormsCComponent } from './pages/cruceros/forms-c/forms-c.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsEComponent } from './pages/escapadas/forms-e/forms-e.component';
+import { FormsIComponent } from './pages/islas/forms-i/forms-i.component';
+import { FormsSComponent } from './pages/spas/forms-s/forms-s.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     DetalleCComponent,
     DetalleIComponent,
     DetalleSComponent,
-    FormsCComponent
+    FormsCComponent,
+    FormsEComponent,
+    FormsIComponent,
+    FormsSComponent
   ],
   imports: [
     BrowserModule,

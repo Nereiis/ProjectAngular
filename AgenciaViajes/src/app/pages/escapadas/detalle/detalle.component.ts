@@ -32,5 +32,8 @@ export class DetalleComponent {
       this.router.navigate(['/escapadas'])
     })
   }
-
+  putEscapada(){
+    this.service.setEscapada(this.escapada, this.id)
+    this.router.navigate(['editEscapada'])
+  }
 }

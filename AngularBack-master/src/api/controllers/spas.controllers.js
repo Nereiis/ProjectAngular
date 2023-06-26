@@ -27,6 +27,7 @@ const postSpas = async(req, res) => {
                 newSpa.Imagen = req.file.path
             }
         const createdSpa = await newSpa.save()
+        return res.status(201).json(createdSpa);
     } catch (error) {
         return res.status(500).json(error)
     }

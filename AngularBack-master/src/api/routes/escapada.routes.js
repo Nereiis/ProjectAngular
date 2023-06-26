@@ -6,8 +6,8 @@ const escapadasRouter = express.Router();
 
 escapadasRouter.get("/", getEscapadas);
 escapadasRouter.get("/:id", getEscapadaById);
-escapadasRouter.post("/", isAuth, upload.single("portada"), postEscapada);
-escapadasRouter.delete("/:id", isAuth, deleteEscapada);
-escapadasRouter.put("/:id", isAuth, upload.single("portada"), putEscapada);
+escapadasRouter.post("/",  upload.single("portada"), postEscapada);
+escapadasRouter.delete("/:id",  deleteEscapada);
+escapadasRouter.put("/:id",  upload.single("portada"), putEscapada);
 
 module.exports = escapadasRouter;

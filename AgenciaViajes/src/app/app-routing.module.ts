@@ -10,19 +10,30 @@ import { DetalleComponent } from './pages/escapadas/detalle/detalle.component';
 import { DetalleIComponent } from './pages/islas/detalle-i/detalle-i.component';
 import { DetalleSComponent } from './pages/spas/detalle-s/detalle-s.component';
 import { FormsCComponent } from './pages/cruceros/forms-c/forms-c.component';
+import { FormsEComponent } from './pages/escapadas/forms-e/forms-e.component';
+import { FormsSComponent } from './pages/spas/forms-s/forms-s.component';
+import { FormsIComponent } from './pages/islas/forms-i/forms-i.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'escapadas', component: EscapadasComponent},
   { path: 'escapadas/:id', component: DetalleComponent},
+  { path: 'editEscapada', component: FormsEComponent},
+  { path: 'addEscapada', component: FormsEComponent},
   { path: 'cruceros', component: CrucerosComponent},
   { path: 'cruceros/:id', component: DetalleCComponent},
   { path: 'editCrucero', component: FormsCComponent},
   { path: 'addCrucero', component: FormsCComponent},
   { path: 'islas', component: IslasComponent},
   { path: 'islas/:id', component: DetalleIComponent},
+
+  { path: 'editIsla', component: FormsIComponent},
+  { path: 'addIsla', component: FormsIComponent},
+
   { path: 'spas', component: SpasComponent},
-  { path: 'spas/:id', component: DetalleSComponent}
+  { path: 'spas/:id', component: DetalleSComponent},
+  { path: 'editSpa', component: FormsSComponent},
+  { path: 'addSpa', component: FormsSComponent},
 ];
 
 @NgModule({

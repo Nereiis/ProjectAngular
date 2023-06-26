@@ -1,3 +1,4 @@
+import { IslasComponent } from './../islas.component';
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ViajesI } from 'src/app/models/interfaces';
@@ -32,5 +33,9 @@ export class DetalleIComponent {
       alert('Elemento eliminado')
       this.router.navigate(['/islas'])
     })
+  }
+  putIsla(){
+    this.service.setIsla(this.isla, this.id)
+    this.router.navigate(['editIsla'])
   }
 }
