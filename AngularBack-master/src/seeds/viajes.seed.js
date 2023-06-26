@@ -18,7 +18,7 @@ const players= [
       "image": "../assets/LeBron.jpg",
       "characteristics": {
         "position": "Small Forward",
-        "MVPs": "4",
+        "MVPs": "3",
         "championships": "4",
         "team": "Los Angeles Lakers"
       },
