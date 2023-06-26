@@ -9,6 +9,15 @@ const getSpas = async(req, res) => {
         return res.status(500).json(error)
     }
 }
+const getSpasById = async(req,res)=>{
+    try {
+        const {id}=req.params;
+        const SpasById = await Spa.findById(id);
+        return res.status(200).json(SpasById)
+    } catch (error) {
+        return res.status(500).json(error);
+    }
+}
 
 const postSpas = async(req, res) => {
     try {
@@ -59,4 +68,4 @@ const deleteSpas = async(req,res) => {
 
 }
 
-module.exports = {getSpas, postSpas, putSpas, deleteSpas}
+module.exports = {getSpas,getSpasById,  postSpas, putSpas, deleteSpas}
