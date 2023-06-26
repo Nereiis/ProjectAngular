@@ -18,6 +18,7 @@ const routes: Routes = [
   { path: 'cruceros', component: CrucerosComponent},
   { path: 'cruceros/:id', component: DetalleCComponent},
   { path: 'editCrucero', component: FormsCComponent},
+  { path: 'addCrucero', component: FormsCComponent},
   { path: 'islas', component: IslasComponent},
   { path: 'islas/:id', component: DetalleIComponent},
   { path: 'spas', component: SpasComponent},

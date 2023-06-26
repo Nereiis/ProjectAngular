@@ -7,7 +7,7 @@ import { ViajesI } from '../models/interfaces';
 })
 export class CrucerosService {
 
-  id!: String
+  id: String = ""
   crucero!: ViajesI
 
   public db_url : string = 'http://localhost:5000/cruceros';
@@ -41,5 +41,9 @@ export class CrucerosService {
 
   getId(){
     return this.id
+  }
+
+  postCrucero(crucero:ViajesI){
+    return this.http.post(`${this.db_url}`, crucero)
   }
 }
