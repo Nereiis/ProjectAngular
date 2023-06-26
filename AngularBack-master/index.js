@@ -8,7 +8,7 @@ const librosRouter = require('./src/api/routes/libro.routes');
 const playersRouter = require('./src/api/routes/player.routes');
 const autoresRouter = require('./src/api/routes/autor.routes');
 const userRouter = require('./src/api/routes/user.routes');
-
+const cruceroRouter = require('./src/api/routes/crucero.routes');
 const {connect} = require('./src/utils/db');
 const { isAuth } = require('./src/middlewares/auth');
 const PORT = process.env.PORT;
@@ -48,6 +48,7 @@ app.use('/players', playersRouter);
 app.use('/libros', librosRouter);
 app.use('/autores',isAuth, autoresRouter);
 app.use('/users', userRouter);
+app.use('/cruceros', cruceroRouter);
 
 app.use('/', (req, res) => {
   return res.json(documentacion);
