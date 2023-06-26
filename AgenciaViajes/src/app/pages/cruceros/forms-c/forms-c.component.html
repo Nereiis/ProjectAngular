@@ -22,7 +22,7 @@
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Link Caratula</label>
         <input formControlName="Caratula" type="text" class="form-control" id="exampleFormControlInput1">
-        <p *ngIf="(submitted && cruceroForm?.get('photo')?.hasError('required'))">Este campo es requerido</p>
+        <p *ngIf="(submitted && cruceroForm?.get('Caratula')?.hasError('required'))">Este campo es requerido</p>
     </div>
 
     <div class="mb-3">
@@ -33,11 +33,11 @@
         <h6> Actividades </h6>
         <div class="col">
           <label>Dia 1</label>
-          <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+          <input type="text" class="form-control" formControlName="Dia1"  placeholder="First name" aria-label="First name">
         </div>
         <div class="col">
           <label>Dia 2</label>
-          <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+          <input type="text" class="form-control" formControlName="Dia2" placeholder="Last name" aria-label="Last name">
         </div>
       </div>
     <div class="col-12">

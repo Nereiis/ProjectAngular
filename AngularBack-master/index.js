@@ -58,7 +58,7 @@ app.use('/spas', spaRouter);
 
 
 app.use('/', (req, res) => {
-  return res.json(documentacion);
+  return res.json("no hay ruta");
 })
 
 //ponemos una ruta por si no se encontrase la ruta requerida
