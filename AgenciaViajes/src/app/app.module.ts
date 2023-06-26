@@ -10,6 +10,11 @@ import { EscapadasComponent } from './pages/escapadas/escapadas.component';
 import { CrucerosComponent } from './pages/cruceros/cruceros.component';
 import { SpasComponent } from './pages/spas/spas.component';
 import { IslasComponent } from './pages/islas/islas.component';
+import { HttpClientModule } from '@angular/common/http';
+import { DetalleComponent } from './pages/escapadas/detalle/detalle.component';
+import { DetalleCComponent } from './pages/cruceros/detalle-c/detalle-c.component';
+import { DetalleIComponent } from './pages/islas/detalle-i/detalle-i.component';
+import { DetalleSComponent } from './pages/spas/detalle-s/detalle-s.component';
 
 @NgModule({
   declarations: [
@@ -20,11 +25,16 @@ import { IslasComponent } from './pages/islas/islas.component';
     EscapadasComponent,
     CrucerosComponent,
     SpasComponent,
-    IslasComponent
+    IslasComponent,
+    DetalleComponent,
+    DetalleCComponent,
+    DetalleIComponent,
+    DetalleSComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
