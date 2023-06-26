@@ -6,6 +6,7 @@ const arrayIslas = [
     {
         "Nombre": "",
         "Ubicacion": "",
+        "Precio": "",
         "Descripcion": "",
         "Caratula": "",
         "Imagen": "",
