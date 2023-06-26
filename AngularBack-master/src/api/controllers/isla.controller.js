@@ -55,6 +55,15 @@ const getIslas = async(req,res) => {
         return res.status(500).json(error)
     }
 }
+const getIslaById = async(req,res)=>{
+    try {
+        const {id}=req.params;
+        const IslaById = await Isla.findById(id);
+        return res.status(200).json(IslaById)
+    } catch (error) {
+        return res.status(500).json(error);
+    }
+}
 
 const postIslas = async(req,res) => {
     try {
@@ -107,4 +116,4 @@ const deleteIslas = async(req,res) => {
 
 }
 
-module.exports = {getIslas, postIslas, putIslas, deleteIslas}
+module.exports = {getIslas,getIslaById, postIslas, putIslas, deleteIslas}
