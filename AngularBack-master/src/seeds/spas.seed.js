@@ -12,8 +12,8 @@ const arraySpas = [
         "Imagen": "https://images.squarespace-cdn.com/content/v1/5be5690389c172e68f8593b9/6046c58e-7e75-4e9a-b557-bc873d63f82e/Corinthia_London_Spa_Sauna_Jack_Hardy_2019.jpg?format=1500w",
         "Actividades": { 
             "Itinerario": { 
-                "Dia1": "",
-                "Dia2": ""
+                "Dia1": "Entusiasmo por la vida: Deje que las tensiones y el estrés de la vida desaparezcan y desbloquee su entusiasmo por la vida.",
+                "Dia2": "Serenidad de verano en ESPA Life: Despierta tus sentidos y abraza la maravillosa energía del verano."
             }}
     }
        
