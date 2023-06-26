@@ -1,0 +1,11 @@
+escapadas
+- Nombre
+- Ubicacion
+- Precio
+- Descripcion
+- Caratula
+- Imagen
+- Actividades 
+    - Itinerario
+        - Dia 1
+        - Dia 2
