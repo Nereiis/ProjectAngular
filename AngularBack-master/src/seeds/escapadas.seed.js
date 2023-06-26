@@ -7,7 +7,7 @@ const arrayEscapadas = [
     {
         "Nombre": "",
         "Ubicacion": "",
-        "Precio": "",
+        "Precio": 0,
         "Descripcion": "",
         "Caratula": "",
         "Imagen": "",

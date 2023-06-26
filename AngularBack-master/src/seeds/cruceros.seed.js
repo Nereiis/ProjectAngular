@@ -6,7 +6,7 @@ const arrayCruceros = [
     {
         "Nombre": "",
         "Ubicacion": "",
-        "Precio": "",
+        "Precio": 0,
         "Descripcion": "",
         "Caratula": "",
         "Imagen": "",
