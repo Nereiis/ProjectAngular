@@ -69,4 +69,4 @@ const deleteEscapada = async(req,res) => {
 
 }
 
-module.exports = {getEscapadas, postEscapada, putEscapada, deleteEscapada}
+module.exports = {getEscapadas, getEscapadaById, postEscapada, putEscapada, deleteEscapada}
