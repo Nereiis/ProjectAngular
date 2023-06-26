@@ -10,8 +10,8 @@ const upload = require("../../middlewares/upload.file");
 const islaRouter = express.Router();
 
 islaRouter.get("/", getIslas);
-islaRouter.post("/", isAuth, upload.single("portada"), postIslas);
+islaRouter.post("/", isAuth, upload.single("imagen"), postIslas);
 islaRouter.delete("/:id", isAuth, deleteIslas);
-islaRouter.put("/:id", isAuth, upload.single("portada"), putIslas);
+islaRouter.put("/:id", isAuth, upload.single("imagen"), putIslas);
 
 module.exports = islaRouter;

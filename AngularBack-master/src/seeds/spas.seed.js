@@ -17,7 +17,7 @@ const arraySpas = [
             }}
     },{
         "Nombre": "Sámas Spa, Park Hotel Kenmare",
-        "Ubicacion": "",
+        "Ubicacion": "Irlanda",
         "Precio": 485,
         "Descripcion": "SAMAS Spa está dedicado a nutrir la mente, el cuerpo y el espíritu. Está construido para abrir una conexión sincera con las maravillas de la naturaleza que nos rodea. Nos complace presentar los productos Bamford en Irlanda. Creados por Carole Bamford, los tratamientos creados individualmente utilizan productos especialmente formulados de las gamas de cuidado para el cuerpo y la piel de Bamford elaborados con ingredientes naturales certificados orgánicamente al más alto nivel. En SAMAS creemos que tomarse un tiempo para relajarse, pensar, desconectar y cuidarse no es un lujo, es una necesidad en el mundo frenético de hoy para cuidarse. ",
         "Caratula": "https://d1m7xnn75ypr6t.cloudfront.net/images/media/7CC59269-E8B4-429D-AD88CFE6E86D1A97/?w=900&h=600",
@@ -92,7 +92,7 @@ const arraySpas = [
 ]
 
 
-mongoose.connect('mongodb+srv://root:root@cluster0.imov6up.mongodb.net/libreria?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://root:root@cluster0.8phs6yk.mongodb.net/MyAPI?retryWrites=true&w=majority')
 .then(async () => {
     const allSpas = await Spa.find()
     if(allSpas.length > 0){
@@ -102,7 +102,7 @@ mongoose.connect('mongodb+srv://root:root@cluster0.imov6up.mongodb.net/libreria?
 })
 .catch(err => console.error('Error borrando',err))
 .then(async() => {
-    const spasMap = arraySpas.map((Spa) => new Spa(Spa))
+    const spasMap = arraySpas.map((spa) => new Spa(spa))
     await Spa.insertMany(spasMap)
     console.log('Spas añadidos');
 })

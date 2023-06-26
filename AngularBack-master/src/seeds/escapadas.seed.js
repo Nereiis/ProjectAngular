@@ -127,7 +127,7 @@ const arrayEscapadas = [
 ]
 
 
-mongoose.connect('mongodb+srv://root:root@cluster0.imov6up.mongodb.net/libreria?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://root:root@cluster0.8phs6yk.mongodb.net/MyAPI?retryWrites=true&w=majority')
 .then(async () => {
     const allEscapadas = await Escapada.find()
     if(allEscapadas.length > 0){

@@ -111,7 +111,7 @@ const arrayCruceros = [
 ]
 
 
-mongoose.connect('mongodb+srv://root:root@cluster0.imov6up.mongodb.net/libreria?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://root:root@cluster0.8phs6yk.mongodb.net/MyAPI?retryWrites=true&w=majority')
 .then(async () => {
     const allCruceros = await Crucero.find()
     if(allCruceros.length > 0){
@@ -121,7 +121,7 @@ mongoose.connect('mongodb+srv://root:root@cluster0.imov6up.mongodb.net/libreria?
 })
 .catch(err => console.error('Error borrando',err))
 .then(async() => {
-    const crucerosMap = arrayCruceros.map((Crucero) => new Crucero(Crucero))
+    const crucerosMap = arrayCruceros.map((crucero) => new Crucero(crucero))
     await Crucero.insertMany(crucerosMap)
     console.log('Cruceros añadidos');
 })

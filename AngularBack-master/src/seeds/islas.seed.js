@@ -85,7 +85,7 @@ const arrayIslas = [
 ]
 
 
-mongoose.connect('mongodb+srv://root:root@cluster0.imov6up.mongodb.net/libreria?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://root:root@cluster0.8phs6yk.mongodb.net/MyAPI?retryWrites=true&w=majority')
 .then(async () => {
     const allIslas = await Isla.find()
     if(allIslas.length > 0){
@@ -95,7 +95,7 @@ mongoose.connect('mongodb+srv://root:root@cluster0.imov6up.mongodb.net/libreria?
 })
 .catch(err => console.error('Error borrando',err))
 .then(async() => {
-    const islasMap = arrayIslas.map((Isla) => new Isla(Isla))
+    const islasMap = arrayIslas.map((isla) => new Isla(isla))
     await Isla.insertMany(islasMap)
     console.log('Islas añadidos');
 })
