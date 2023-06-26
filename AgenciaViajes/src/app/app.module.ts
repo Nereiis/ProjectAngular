@@ -15,6 +15,8 @@ import { DetalleComponent } from './pages/escapadas/detalle/detalle.component';
 import { DetalleCComponent } from './pages/cruceros/detalle-c/detalle-c.component';
 import { DetalleIComponent } from './pages/islas/detalle-i/detalle-i.component';
 import { DetalleSComponent } from './pages/spas/detalle-s/detalle-s.component';
+import { FormsCComponent } from './pages/cruceros/forms-c/forms-c.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,12 +31,15 @@ import { DetalleSComponent } from './pages/spas/detalle-s/detalle-s.component';
     DetalleComponent,
     DetalleCComponent,
     DetalleIComponent,
-    DetalleSComponent
+    DetalleSComponent,
+    FormsCComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -28,4 +28,11 @@ export class DetalleSComponent {
     })
     console.log(this.spa);
   }
+
+  deleteSpa(){
+    this.service.deleteSpa(this.id).subscribe((data) => {
+      alert('Elemento eliminado')
+      this.router.navigate(['/spas'])
+    })
+  }
 }

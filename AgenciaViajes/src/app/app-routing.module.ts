@@ -9,6 +9,7 @@ import { SpasComponent } from './pages/spas/spas.component';
 import { DetalleComponent } from './pages/escapadas/detalle/detalle.component';
 import { DetalleIComponent } from './pages/islas/detalle-i/detalle-i.component';
 import { DetalleSComponent } from './pages/spas/detalle-s/detalle-s.component';
+import { FormsCComponent } from './pages/cruceros/forms-c/forms-c.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'escapadas/:id', component: DetalleComponent},
   { path: 'cruceros', component: CrucerosComponent},
   { path: 'cruceros/:id', component: DetalleCComponent},
+  { path: 'editCrucero', component: FormsCComponent},
   { path: 'islas', component: IslasComponent},
   { path: 'islas/:id', component: DetalleIComponent},
   { path: 'spas', component: SpasComponent},

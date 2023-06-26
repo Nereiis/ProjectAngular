@@ -17,4 +17,8 @@ export class SpasService {
   getSpaById(id: string) {
     return this.http.get(`${this.db_url}/${id}`);
   }
+
+  deleteSpa(id: string) {
+    return this.http.delete(`${this.db_url}/${id}`)
+  }
 }

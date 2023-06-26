@@ -25,5 +25,19 @@ export class DetalleCComponent {
     this.service.getCruceroById(this.id).subscribe((data:any) => {
       this.crucero = data;
     })
+
+    
+  }
+
+  deleteCrucero(){
+    this.service.deleteCrucero(this.id).subscribe((data) => {
+      alert('Elemento eliminado')
+      this.router.navigate(['/cruceros'])
+    })
+  }
+
+  putCrucero(){
+    this.service.setCrucero(this.crucero, this.id)
+    this.router.navigate(['editCrucero'])
   }
 }

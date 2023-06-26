@@ -18,4 +18,5 @@ export class CrucerosComponent {
       this.crucerosList = [...data];
     })
   }
+  
 }

@@ -17,4 +17,8 @@ export class IslasService {
   getIslaById(id: string) {
     return this.http.get(`${this.db_url}/${id}`);
   }
+
+  deleteIsla(id: string) {
+    return this.http.delete(`${this.db_url}/${id}`)
+  }
 }

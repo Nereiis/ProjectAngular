@@ -17,4 +17,8 @@ export class EscapadasService {
   getEscapadaById(id: string) {
     return this.http.get(`${this.db_url}/${id}`);
   }
+
+  deleteEscapada(id: string) {
+    return this.http.delete(`${this.db_url}/${id}`)
+  }
 }

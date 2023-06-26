@@ -26,4 +26,11 @@ export class DetalleIComponent {
       this.isla = data;
     })
   }
+
+  deleteIsla(){
+    this.service.deleteIsla(this.id).subscribe((data) => {
+      alert('Elemento eliminado')
+      this.router.navigate(['/islas'])
+    })
+  }
 }

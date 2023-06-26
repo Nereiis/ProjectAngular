@@ -6,4 +6,8 @@
     <p>{{crucero.Descripcion}}</p>
     <p>{{crucero.Actividades.Itinerario.Dia1}}</p>
     <p>{{crucero.Actividades.Itinerario.Dia2}}</p>
+    <div class="edit-container">
+        <button type="button" class="btn btn-outline-success" (click)="putCrucero()"> Editar </button>
+        <button type="button" class="btn btn-outline-danger" (click)="deleteCrucero()"> Eliminar </button>
+    </div>
 </div>

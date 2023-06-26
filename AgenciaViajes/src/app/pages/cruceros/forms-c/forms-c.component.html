@@ -1,0 +1,43 @@
+<form [formGroup]="cruceroForm" class="add-character" (ngSubmit)="editCrucero()">
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label"> Nombre </label>
+        <input formControlName="Nombre" type="text" class="form-control" id="exampleFormControlInput1">
+        <p *ngIf="(submitted && cruceroForm?.get('Nombre')?.hasError('required'))">Este campo es requerido</p>
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label"> Ubicacion </label>
+        <input formControlName="Ubicacion" type="text" class="form-control" id="exampleFormControlInput1">
+        <p *ngIf="(submitted && cruceroForm?.get('Ubicacion')?.hasError('required'))">Este campo es requerido</p>
+    </div>
+    <div class="col-md-2">
+        <label for="exampleFormControlInput1" class="form-label"> Precio </label>
+        <input formControlName="Precio" type="number" class="form-control" id="exampleFormControlInput1">
+        <p *ngIf="(submitted && cruceroForm?.get('Precio')?.hasError('required'))">Este campo es requerido</p>
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label"> Descripción </label>
+        <textarea formControlName="Descripcion" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <p *ngIf="(submitted && cruceroForm?.get('Descripcion')?.hasError('required'))">Este campo es requerido</p>
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Link Caratula</label>
+        <input formControlName="Caratula" type="text" class="form-control" id="exampleFormControlInput1">
+        <p *ngIf="(submitted && cruceroForm?.get('photo')?.hasError('required'))">Este campo es requerido</p>
+    </div>
+    
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label"> Link Imagen </label>
+        <input formControlName="Imagen" type="text" class="form-control" id="exampleFormControlInput1">
+    </div>
+    <div class="row g-3">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+        </div>
+      </div>
+    <div class="col-12">
+        <button class="btn btn-primary" type="submit"> Editar Crucero </button>
+    </div>
+</form>

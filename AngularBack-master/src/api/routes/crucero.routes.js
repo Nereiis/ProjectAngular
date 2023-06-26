@@ -12,9 +12,9 @@ const upload = require("../../middlewares/upload.file");
 const crucerosRouter = express.Router();
 
 crucerosRouter.get("/", getCruceros);
-crucerosRouter.post("/", isAuth, upload.single("portada"), postCruceros);
-crucerosRouter.delete("/:id", isAuth, deleteCruceros);
-crucerosRouter.put("/:id", isAuth, upload.single("portada"), putCruceros);
+crucerosRouter.post("/",  upload.single("portada"), postCruceros);
+crucerosRouter.delete("/:id", deleteCruceros);
+crucerosRouter.put("/:id", upload.single("portada"), putCruceros);
 crucerosRouter.get('/:id', getCruceroById);
 
 module.exports = crucerosRouter;

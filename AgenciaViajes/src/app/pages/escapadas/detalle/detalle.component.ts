@@ -26,4 +26,11 @@ export class DetalleComponent {
     })
   }
 
+  deleteEscapada(){
+    this.service.deleteEscapada(this.id).subscribe((data) => {
+      alert('Elemento eliminado')
+      this.router.navigate(['/escapadas'])
+    })
+  }
+
 }
