@@ -9,6 +9,15 @@ const getEscapadas = async(req,res) => {
         return res.status(500).json(error)
     }
 }
+const getEscapadaById = async(req,res)=>{
+    try {
+        const {id}=req.params;
+        const escapadaById = await Escapada.findById(id);
+        return res.status(200).json(escapadaById)
+    } catch (error) {
+        return res.status(500).json(error);
+    }
+}
 
 const postEscapada = async(req,res) => {
     try {
