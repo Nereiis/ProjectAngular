@@ -4,11 +4,12 @@ dotenv.config();
 const cors = require('cors');
 const cloudinary = require('cloudinary').v2;
 const documentacion = require('./src/doc/index.json');
-const librosRouter = require('./src/api/routes/libro.routes');
-const playersRouter = require('./src/api/routes/player.routes');
-const autoresRouter = require('./src/api/routes/autor.routes');
+
 const userRouter = require('./src/api/routes/user.routes');
 const cruceroRouter = require('./src/api/routes/crucero.routes');
+const escapadaRouter = require('./src/api/routes/escapada.routes');
+const islaRouter = require('./src/api/routes/isla.routes');
+const spaRouter = require('./src/api/routes/spas.routes');
 const {connect} = require('./src/utils/db');
 const { isAuth } = require('./src/middlewares/auth');
 const PORT = process.env.PORT;
@@ -44,11 +45,17 @@ app.use(cors(
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use('/players', playersRouter);
-app.use('/libros', librosRouter);
-app.use('/autores',isAuth, autoresRouter);
+
+
 app.use('/users', userRouter);
 app.use('/cruceros', cruceroRouter);
+app.use('/escapadas', escapadaRouter);
+app.use('/islas', islaRouter);
+app.use('/spas', spaRouter);
+
+
+
+
 
 app.use('/', (req, res) => {
   return res.json(documentacion);

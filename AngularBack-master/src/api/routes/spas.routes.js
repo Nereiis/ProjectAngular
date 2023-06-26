@@ -7,11 +7,11 @@ const {
 } = require("../controllers/spas.controllers");
 const { pruebaMiddleware, isAuth, isAdmin } = require("../../middlewares/auth");
 const upload = require("../../middlewares/upload.file");
-const spasRouter = express.Router();
+const spaRouter = express.Router();
 
-spasRouter.get("/", getSpas);
-spasRouter.post("/", isAuth, upload.single("Imagen"), postSpas);
-spasRouter.delete("/:id", isAuth, deleteSpas);
-spasRouter.put("/:id", isAuth, upload.single("Imagen"), putSpas);
+spaRouter.get("/", getSpas);
+spaRouter.post("/", isAuth, upload.single("Imagen"), postSpas);
+spaRouter.delete("/:id", isAuth, deleteSpas);
+spaRouter.put("/:id", isAuth, upload.single("Imagen"), putSpas);
 
-module.exports = spasRouter;
+module.exports = spaRouter;

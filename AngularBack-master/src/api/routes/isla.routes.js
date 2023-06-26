@@ -7,11 +7,11 @@ const {
 } = require("../controllers/isla.controller");
 const { pruebaMiddleware, isAuth, isAdmin } = require("../../middlewares/auth");
 const upload = require("../../middlewares/upload.file");
-const islassRouter = express.Router();
+const islaRouter = express.Router();
 
-islasRouter.get("/", getIslas);
-islasRouter.post("/", isAuth, upload.single("portada"), postIslas);
-islasRouter.delete("/:id", isAuth, deleteIslas);
-islasRouter.put("/:id", isAuth, upload.single("portada"), putIslas);
+islaRouter.get("/", getIslas);
+islaRouter.post("/", isAuth, upload.single("portada"), postIslas);
+islaRouter.delete("/:id", isAuth, deleteIslas);
+islaRouter.put("/:id", isAuth, upload.single("portada"), putIslas);
 
-module.exports = islasRouter;
+module.exports = islaRouter;
