@@ -1,3 +1,4 @@
+<div>
 <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" routerLink="/"> Viaja, Sueña </a>
@@ -41,4 +42,21 @@
       </div>
     </div>
   </nav>
+  <div>
+    <div *ngFor="let item of searchResult">
+      
+      <div class="row" *ngFor="let s of item">
+        <div *ngIf="s.Nombre">
+          <h3>{{s.Nombre}}</h3>
+          <p>{{s.Ubicacion}}</p>
+          <p>{{s.Precio}}</p>
+          <img src="{{s.Caratula}}" alt="{{s.Nombre}}">
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+  
 

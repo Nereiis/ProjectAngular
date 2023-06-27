@@ -33,17 +33,13 @@ searchForm=new FormGroup({
 submitForm(){
   console.log(this.searchForm.value)
   this.service.getSearch(this.searchForm.value).subscribe((result)=>{
-    console.log(result)
-    this.searchResult=result.result;
+    
+    this.searchResult=result;
+    console.log(this.searchResult[0])
     
   })
 }
   
-
-
-
-
-
 
   logOut(){
     // localStorage.clear(); //COn este borrariamos todo en localstorage
