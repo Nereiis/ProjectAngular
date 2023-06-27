@@ -1,6 +1,8 @@
 import { AuthService } from './../../services/auth.service';
 import { Component, HostListener } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { NavigationEnd, Router } from '@angular/router';
+import { NavbarService } from 'src/app/services/navbar.service';
 
 @Component({
   selector: 'app-navbar',
@@ -11,7 +13,7 @@ export class NavbarComponent {
   token:any;
   
 url?:string;
-constructor(private router:Router, private AuthService:AuthService){
+constructor(private router:Router, private AuthService:AuthService, private service:NavbarService){
   this.token=this.AuthService.getToken();
   this.router.routeReuseStrategy.shouldReuseRoute = () => false;
   this.router.events.subscribe((val) => {
@@ -23,8 +25,19 @@ constructor(private router:Router, private AuthService:AuthService){
   });
   
 }
+searchResult:any;
+searchForm=new FormGroup({
+  "nombre":new FormControl(null)
 
-
+})
+submitForm(){
+  console.log(this.searchForm.value)
+  this.service.getSearch(this.searchForm.value).subscribe((result)=>{
+    console.log(result)
+    this.searchResult=result.result;
+    
+  })
+}
   
 
 

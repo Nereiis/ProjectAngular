@@ -22,8 +22,8 @@
             <a class="nav-link active" routerLink="/islas"> Islas </a>
           </li> 
         </ul>
-        <form class="d-flex" role="search" *ngIf="url !== '/'">
-          <input class="form-control me-2" type="search" placeholder="Introduce un destino, experiencia.." aria-label="Search">
+        <form class="d-flex" role="search" [formGroup]="searchForm" (ngSubmit)="submitForm()">
+          <input class="form-control me-2" formControlName="nombre"  type="search" placeholder="Introduce un destino, experiencia.." aria-label="Search">
           <button class="btn btn-outline-success" type="submit"> Buscar </button>
         </form>
         <div class="dropdown">

@@ -1,1 +1,38 @@
-.list{margin-top:80px;display:flex;flex-wrap:wrap;justify-content:center;list-style:none}.itemlist{width:300px;margin:10px;padding:10px;border:1px solid #ccc;border-radius:5px;text-align:center;box-shadow:0px 2px 4px rgba(0,0,0,.1);transition:box-shadow .3s ease}.itemlist h3{font-size:20px;margin-bottom:5px;color:#187bcd}.itemlist p{margin-bottom:5px;color:#337ab7}.itemlist img{width:100%;max-height:200px;-o-object-fit:cover;object-fit:cover;border-radius:5px}.itemlist:hover{box-shadow:0px 4px 8px rgba(0,0,0,.2)}
+.list {
+  margin-top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+}
+
+.itemlist {
+  width: 300px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+.itemlist h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: #187bcd;
+}
+.itemlist p {
+  margin-bottom: 5px;
+  color: #337ab7;
+}
+.itemlist img {
+  width: 100%;
+  max-height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+}
+
+.itemlist:hover {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}/*# sourceMappingURL=cruceros.component.css.map */

@@ -10,6 +10,7 @@ const cruceroRouter = require('./src/api/routes/crucero.routes');
 const escapadaRouter = require('./src/api/routes/escapada.routes');
 const islaRouter = require('./src/api/routes/isla.routes');
 const spaRouter = require('./src/api/routes/spas.routes');
+const searchRouter = require('./src/api/routes/search.routes');
 const {connect} = require('./src/utils/db');
 const { isAuth } = require('./src/middlewares/auth');
 const PORT = process.env.PORT;
@@ -52,6 +53,7 @@ app.use('/cruceros', cruceroRouter);
 app.use('/escapadas', escapadaRouter);
 app.use('/islas', islaRouter);
 app.use('/spas', spaRouter);
+app.use('/search', searchRouter);
 
 
 
