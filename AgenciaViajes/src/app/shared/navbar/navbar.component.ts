@@ -39,6 +39,11 @@ submitForm(){
     
   })
 }
+limpiar(){
+  this.searchResult=[];
+  this.searchForm.reset();
+  this.router.navigate(["/"]);
+}
   
 
   logOut(){
