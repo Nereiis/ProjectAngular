@@ -15,27 +15,30 @@ import { FormsSComponent } from './pages/spas/forms-s/forms-s.component';
 import { FormsIComponent } from './pages/islas/forms-i/forms-i.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { LoginComponent } from './pages/login/login.component';
+import { authGuard } from './guard/auth.guard';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
+
   { path: 'escapadas', component: EscapadasComponent},
   { path: 'escapadas/:id', component: DetalleComponent},
-  { path: 'editEscapada', component: FormsEComponent},
-  { path: 'addEscapada', component: FormsEComponent},
+  { path: 'editEscapada', component: FormsEComponent, canActivate:[authGuard]},
+  { path: 'addEscapada', component: FormsEComponent, canActivate:[authGuard]},
+
   { path: 'cruceros', component: CrucerosComponent},
   { path: 'cruceros/:id', component: DetalleCComponent},
-  { path: 'editCrucero', component: FormsCComponent},
-  { path: 'addCrucero', component: FormsCComponent},
+  { path: 'editCrucero', component: FormsCComponent, canActivate:[authGuard]},
+  { path: 'addCrucero', component: FormsCComponent, canActivate:[authGuard]},
+
   { path: 'islas', component: IslasComponent},
   { path: 'islas/:id', component: DetalleIComponent},
-
-  { path: 'editIsla', component: FormsIComponent},
-  { path: 'addIsla', component: FormsIComponent},
+  { path: 'editIsla', component: FormsIComponent, canActivate:[authGuard]},
+  { path: 'addIsla', component: FormsIComponent, canActivate:[authGuard]},
 
   { path: 'spas', component: SpasComponent},
   { path: 'spas/:id', component: DetalleSComponent},
-  { path: 'editSpa', component: FormsSComponent},
-  { path: 'addSpa', component: FormsSComponent},
+  { path: 'editSpa', component: FormsSComponent, canActivate:[authGuard]},
+  { path: 'addSpa', component: FormsSComponent, canActivate:[authGuard]},
 
   {path:'register', component:RegisterComponent},
   {path:'login', component:LoginComponent},

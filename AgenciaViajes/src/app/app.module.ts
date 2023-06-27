@@ -10,7 +10,7 @@ import { EscapadasComponent } from './pages/escapadas/escapadas.component';
 import { CrucerosComponent } from './pages/cruceros/cruceros.component';
 import { SpasComponent } from './pages/spas/spas.component';
 import { IslasComponent } from './pages/islas/islas.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { DetalleComponent } from './pages/escapadas/detalle/detalle.component';
 import { DetalleCComponent } from './pages/cruceros/detalle-c/detalle-c.component';
 import { DetalleIComponent } from './pages/islas/detalle-i/detalle-i.component';
@@ -22,6 +22,7 @@ import { FormsIComponent } from './pages/islas/forms-i/forms-i.component';
 import { FormsSComponent } from './pages/spas/forms-s/forms-s.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { AuthInterceptor } from './interceptors/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,13 @@ import { RegisterComponent } from './pages/register/register.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
