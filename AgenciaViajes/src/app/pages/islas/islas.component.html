@@ -7,4 +7,4 @@
         <img src="{{isla.Caratula}}" alt="{{isla.Nombre}}" />
     </li>
 </ul>
-<button routerLink="/addIsla">añadir isla</button>
+<button routerLink="/addIsla" *ngIf="token">añadir isla</button>

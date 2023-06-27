@@ -1,3 +1,4 @@
+import { AuthService } from './../../services/auth.service';
 import { Component } from '@angular/core';
 import { ViajesI } from 'src/app/models/interfaces';
 import { IslasService } from 'src/app/services/islas.service';
@@ -9,8 +10,13 @@ import { IslasService } from 'src/app/services/islas.service';
 })
 export class IslasComponent {
   islasList: ViajesI[] = [];
+  token:any;
 
-  constructor(private service: IslasService) {}
+  constructor(private service: IslasService, private AuthService:AuthService) {
+
+    this.token=this.AuthService.getToken()
+    console.log(this.token)
+  }
 
   ngOnInit(): void {
     this.service.getIslas().subscribe((data: any) => {

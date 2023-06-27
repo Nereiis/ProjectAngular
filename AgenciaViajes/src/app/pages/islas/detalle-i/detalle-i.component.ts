@@ -1,3 +1,4 @@
+import { AuthService } from './../../../services/auth.service';
 import { IslasComponent } from './../islas.component';
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -12,11 +13,16 @@ import { IslasService } from 'src/app/services/islas.service';
 export class DetalleIComponent {
   isla!: ViajesI;
   id!: string;
+  token:any;
 
   constructor(
     private service: IslasService,
     private activatedRoute: ActivatedRoute,
-    private router: Router) {}
+    private AuthService:AuthService,
+    private router: Router) {
+      this.token=this.AuthService.getToken()
+    console.log(this.token)
+    }
 
   ngOnInit() : void {
     this.activatedRoute.paramMap.subscribe((params) => {

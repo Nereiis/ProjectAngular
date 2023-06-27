@@ -1,3 +1,4 @@
+import { AuthService } from './../../../services/auth.service';
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ViajesI } from 'src/app/models/interfaces';
@@ -11,11 +12,14 @@ import { EscapadasService } from 'src/app/services/escapadas.service';
 export class DetalleComponent {
   escapada!: ViajesI;
   id!: string;
-
+  token:any;
   constructor(
     private service: EscapadasService,
     private activatedRoute: ActivatedRoute,
-    private router: Router) {}
+    private AuthService:AuthService,
+    private router: Router) {
+      this.token=this.AuthService.getToken();
+    }
 
   ngOnInit() : void {
     this.activatedRoute.paramMap.subscribe((params) => {

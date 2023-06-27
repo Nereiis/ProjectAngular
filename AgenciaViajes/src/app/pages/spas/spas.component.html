@@ -6,4 +6,4 @@
         <img src="{{spa.Caratula}}" alt="{{spa.Nombre}}" />
     </li>
 </ul>
-<button routerLink="/addSpa">añadir spa</button>
+<button routerLink="/addSpa" *ngIf="token">añadir spa</button>

@@ -7,4 +7,4 @@
         <img src="{{crucero.Caratula}}" alt="{{crucero.Nombre}}" />
     </li>
 </ul>
-<button routerLink="/addCrucero">añadir crucero</button>
+<button routerLink="/addCrucero" *ngIf="token">añadir crucero</button>

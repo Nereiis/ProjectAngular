@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ViajesI } from 'src/app/models/interfaces';
+import { AuthService } from 'src/app/services/auth.service';
 import { CrucerosService } from 'src/app/services/cruceros.service';
 
 @Component({
@@ -9,8 +10,9 @@ import { CrucerosService } from 'src/app/services/cruceros.service';
 })
 export class CrucerosComponent {
   crucerosList: ViajesI[] = [];
-
-  constructor(private service: CrucerosService) {}
+  token:any;
+  constructor(private service: CrucerosService,private AuthService:AuthService) {this.token=this.AuthService.getToken()
+    console.log(this.token)}
 
   ngOnInit(): void {
     this.service.getCruceros().subscribe((data: any) => {

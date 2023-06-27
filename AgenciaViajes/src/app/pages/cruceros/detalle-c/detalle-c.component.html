@@ -10,7 +10,7 @@
     <p>Dia 2 ->
         {{crucero.Actividades.Itinerario.Dia2}}</p>
     <div class="edit-container">
-        <button type="button" class="btn btn-outline-success" (click)="putCrucero()"> Editar </button>
-        <button type="button" class="btn btn-outline-danger" (click)="deleteCrucero()"> Eliminar </button>
+        <button type="button" class="btn btn-outline-success" (click)="putCrucero()"*ngIf="token"> Editar </button>
+        <button type="button" class="btn btn-outline-danger" (click)="deleteCrucero()"*ngIf="token"> Eliminar </button>
     </div>
 </div>
