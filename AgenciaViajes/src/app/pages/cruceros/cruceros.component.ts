@@ -17,6 +17,7 @@ export class CrucerosComponent {
   ngOnInit(): void {
     this.service.getCruceros().subscribe((data: any) => {
       console.log(data);
+      this.AuthService.isclicked=false;
       this.crucerosList = [...data];
     })
   }

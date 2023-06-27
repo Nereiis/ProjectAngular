@@ -10,6 +10,7 @@ import {catchError, throwError } from 'rxjs';
 })
 export class AuthService {
   db_url: string = 'http://localhost:5000';
+  isclicked:boolean=false;
   constructor(private http: HttpClient) { }
 
   register(user: UserI){
