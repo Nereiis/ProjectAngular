@@ -5,6 +5,6 @@ const userRoutes = express.Router();
 
 userRoutes.post('/login', login)
 userRoutes.post('/register', register);
-userRoutes.get('/checksession', isAuth, checkSession);
+userRoutes.get('/checksession',isAuth, checkSession); //quitado siaauth
 
 module.exports = userRoutes;

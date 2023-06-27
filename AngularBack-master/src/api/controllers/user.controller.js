@@ -48,8 +48,10 @@ const register = async(req, res) => {
 
 const checkSession = (req, res) => {
     try {
+        console.log("entro en try")
         return res.status(201).json(req.user)
     } catch (error) {
+        console.log("entro en catch")
         return res.status(500).json(error); 
     }
 }

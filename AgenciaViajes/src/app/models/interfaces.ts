@@ -17,4 +17,9 @@ export interface ViajesI{
     Imagen: string;
     Actividades: ActividadesI;
 }
-
+export interface UserI{
+    id?: string;
+    email: string;
+    password: string;
+    role?: string;
+}

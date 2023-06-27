@@ -20,6 +20,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormsEComponent } from './pages/escapadas/forms-e/forms-e.component';
 import { FormsIComponent } from './pages/islas/forms-i/forms-i.component';
 import { FormsSComponent } from './pages/spas/forms-s/forms-s.component';
+import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { FormsSComponent } from './pages/spas/forms-s/forms-s.component';
     FormsCComponent,
     FormsEComponent,
     FormsIComponent,
-    FormsSComponent
+    FormsSComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

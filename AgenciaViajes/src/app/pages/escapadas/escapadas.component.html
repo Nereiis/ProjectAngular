@@ -7,4 +7,4 @@
         <img src="{{escapada.Caratula}}" alt="{{escapada.Nombre}}" />
     </li>
 </ul>
-<button routerLink="/addEscapada">añadir escapada</button>
+<button routerLink="/addEscapada" *ngIf="token">añadir escapada</button>

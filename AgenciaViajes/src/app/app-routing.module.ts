@@ -13,6 +13,8 @@ import { FormsCComponent } from './pages/cruceros/forms-c/forms-c.component';
 import { FormsEComponent } from './pages/escapadas/forms-e/forms-e.component';
 import { FormsSComponent } from './pages/spas/forms-s/forms-s.component';
 import { FormsIComponent } from './pages/islas/forms-i/forms-i.component';
+import { RegisterComponent } from './pages/register/register.component';
+import { LoginComponent } from './pages/login/login.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -34,6 +36,10 @@ const routes: Routes = [
   { path: 'spas/:id', component: DetalleSComponent},
   { path: 'editSpa', component: FormsSComponent},
   { path: 'addSpa', component: FormsSComponent},
+
+  {path:'register', component:RegisterComponent},
+  {path:'login', component:LoginComponent},
+  
 ];
 
 @NgModule({
