@@ -1,10 +1,11 @@
-
-<ul class="list">
-    <li class="itemlist" *ngFor="let crucero of crucerosList" routerLink="/cruceros/{{crucero._id}}">
-        <h3>{{crucero.Nombre}}</h3>
-        <p>{{crucero.Ubicacion}}</p>
-        <p>{{crucero.Precio}}€</p>
-        <img src="{{crucero.Caratula}}" alt="{{crucero.Nombre}}" />
-    </li>
-</ul>
-<button routerLink="/addCrucero" *ngIf="token">añadir crucero</button>
+<div class="container">
+    <ul class="list">
+        <li class="itemlist" *ngFor="let crucero of crucerosList" routerLink="/cruceros/{{crucero._id}}">
+            <h3>{{crucero.Nombre}}</h3>
+            <p>{{crucero.Ubicacion}}</p>
+            <p>{{crucero.Precio}}€</p>
+            <img src="{{crucero.Caratula}}" alt="{{crucero.Nombre}}" />
+        </li>
+    </ul>
+    <button routerLink="/addCrucero" *ngIf="token">Añadir Crucero</button>
+</div>

@@ -1,10 +1,11 @@
-
-<ul class="list">
-    <li class="itemlist" *ngFor="let isla of islasList" routerLink="/islas/{{isla._id}}">
-        <h3>{{isla.Nombre}}</h3>
-        <p>{{isla.Ubicacion}}</p>
-        <p>{{isla.Precio}}€</p>
-        <img src="{{isla.Caratula}}" alt="{{isla.Nombre}}" />
-    </li>
-</ul>
-<button routerLink="/addIsla" *ngIf="token">añadir isla</button>
+<div class="container">
+    <ul class="list">
+        <li class="itemlist" *ngFor="let isla of islasList" routerLink="/islas/{{isla._id}}">
+            <h3>{{isla.Nombre}}</h3>
+            <p>{{isla.Ubicacion}}</p>
+            <p>{{isla.Precio}}€</p>
+            <img src="{{isla.Caratula}}" alt="{{isla.Nombre}}" />
+        </li>
+    </ul>
+    <button routerLink="/addIsla" *ngIf="token">Añadir Isla</button>
+</div>

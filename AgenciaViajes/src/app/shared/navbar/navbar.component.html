@@ -43,9 +43,9 @@
     </div>
   </nav>
   <div>
-    <div *ngFor="let item of searchResult">
+    <div class="search-result" *ngFor="let item of searchResult">
       
-      <div class="row" *ngFor="let s of item">
+      <div class="container" *ngFor="let s of item">
         <div *ngIf="s.Nombre">
           <h3>{{s.Nombre}}</h3>
           <p>{{s.Ubicacion}}</p>

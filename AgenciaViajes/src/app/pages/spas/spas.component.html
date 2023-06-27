@@ -1,9 +1,11 @@
-<ul class="list">
-    <li class="itemlist" *ngFor="let spa of spasList" routerLink="/spas/{{spa._id}}">
-        <h3>{{spa.Nombre}}</h3>
-        <p>{{spa.Ubicacion}}</p>
-        <p>{{spa.Precio}}€</p>
-        <img src="{{spa.Caratula}}" alt="{{spa.Nombre}}" />
-    </li>
-</ul>
-<button routerLink="/addSpa" *ngIf="token">añadir spa</button>
+<div class="container">
+    <ul class="list">
+        <li class="itemlist" *ngFor="let spa of spasList" routerLink="/spas/{{spa._id}}">
+            <h3>{{spa.Nombre}}</h3>
+            <p>{{spa.Ubicacion}}</p>
+            <p>{{spa.Precio}}€</p>
+            <img src="{{spa.Caratula}}" alt="{{spa.Nombre}}" />
+        </li>
+    </ul>
+    <button routerLink="/addSpa" *ngIf="token">Añadir Spa</button>
+</div>
