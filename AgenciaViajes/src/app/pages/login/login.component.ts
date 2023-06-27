@@ -34,8 +34,10 @@ error:any;
           
         this.authApi.login(user).subscribe((data: any) => {
           console.log(data);
-          localStorage.setItem('token', data.token);
-          localStorage.setItem('user', JSON.stringify(data.user));
+          // localStorage.setItem('token', data.token);
+          // localStorage.setItem('user', JSON.stringify(data.user));
+          sessionStorage.setItem('token', data.token);
+          sessionStorage.setItem('user', JSON.stringify(data.user));
           location.reload();
           this.router.navigate(['/']);
           
