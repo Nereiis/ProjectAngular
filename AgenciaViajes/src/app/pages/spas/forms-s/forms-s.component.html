@@ -43,6 +43,7 @@
       </div>
       </div>
     <div class="col-12">
-        <button class="btn btn-primary" type="submit"> Editar Spa </button>
+      <button class="btn btn-primary" *ngIf="_id !== ''" type="submit">Editar Spa </button>
+      <button class="btn btn-primary" *ngIf="_id === ''" type="submit">Crear Spa </button>
     </div>
 </form>
