@@ -1,5 +1,9 @@
 import { AuthService } from 'src/app/services/auth.service';
 import { Component, OnInit } from '@angular/core';
+import 'bootstrap';
+import 'jquery';
+import 'popper.js';
+
 
 @Component({
   selector: 'app-home',
