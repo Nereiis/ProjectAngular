@@ -48,8 +48,10 @@ limpiar(){
 
   logOut(){
     // localStorage.clear(); //COn este borrariamos todo en localstorage
-    localStorage.removeItem('token');
-    localStorage.removeItem('user');
+    // localStorage.removeItem('token');
+    // localStorage.removeItem('user');
+    sessionStorage.removeItem('token');
+    sessionStorage.removeItem('user')
     location.reload();
     this.router.navigate(["/"]);
     
